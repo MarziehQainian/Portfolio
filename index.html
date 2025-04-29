@@ -9,136 +9,122 @@
   <script src="https://unpkg.com/scrollreveal"></script>
   <style>
     body { scroll-behavior: smooth; }
-    .sidebar {
-      background: linear-gradient(135deg, #7e5bef, #fb7d7d);
-      width: 260px;
-      min-height: 100vh;
-    }
     .gradient-text {
       background: linear-gradient(to right, #7e5bef, #fb7d7d);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .nav-link:hover {
-      color: #fb7d7d;
-    }
-    .social-icons a {
-      margin: 0 8px;
-      font-size: 1.5rem;
-      transition: color 0.3s;
-    }
-    .social-icons a:hover {
-      color: #fb7d7d;
-    }
+    .nav-link:hover { color: #fb7d7d; }
+    .social-icons a { margin: 0 8px; font-size: 1.5rem; transition: color 0.3s; }
+    .social-icons a:hover { color: #fb7d7d; }
   </style>
 </head>
-<body class="flex bg-gray-50">
+<body class="bg-gray-50">
 
-  <!-- Sidebar -->
-  <aside class="sidebar text-white flex flex-col justify-center items-center p-6">
-    <img src="assets/queen-goje.jpg" alt="Marzieh Qainian" class="w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover mb-4">
-    <h1 class="text-2xl font-bold mb-2">Marzieh Qainian</h1>
-    <div class="social-icons flex justify-center mb-6">
-      <a href="https://github.com/MarziehQainian" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/marziehqainian" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <nav class="flex flex-col space-y-4">
-      <a href="#about" class="nav-link">About</a>
-      <a href="#skills" class="nav-link">Skills</a>
-      <a href="#experience" class="nav-link">Experience</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#contact" class="nav-link">Contact</a>
-    </nav>
-  </aside>
+  <!-- Responsive Layout -->
+  <div class="min-h-screen md:flex">
 
-  <!-- Main Content -->
-  <main class="flex-1 overflow-y-auto p-10">
-
-    <!-- About Section -->
-    <section id="about" class="mb-20">
-      <h2 class="text-4xl font-bold gradient-text mb-6">Hello, I'm Marzieh</h2>
-      <p class="text-gray-700 leading-relaxed">
-        A passionate Full Stack .NET Developer and aspiring Data Scientist based in Berlin. I turn complex ideas into scalable backend systems and explore the power of data to build smarter solutions. Innovation, clean architecture, and creativity drive my code.
-      </p>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="mb-20">
-      <h2 class="text-4xl font-bold gradient-text mb-6">Skills</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-        <div class="bg-white p-5 rounded-xl shadow-md">
-          <h3 class="font-semibold text-indigo-600 mb-2">Backend</h3>
-          <p class="text-sm text-gray-700">C#, .NET Core, ASP.NET MVC, Entity Framework, Dapper, Microservices</p>
-        </div>
-        <div class="bg-white p-5 rounded-xl shadow-md">
-          <h3 class="font-semibold text-indigo-600 mb-2">Frontend</h3>
-          <p class="text-sm text-gray-700">JavaScript, Angular, HTML, CSS, KendoUI</p>
-        </div>
-        <div class="bg-white p-5 rounded-xl shadow-md">
-          <h3 class="font-semibold text-indigo-600 mb-2">Databases</h3>
-          <p class="text-sm text-gray-700">SQL Server, MongoDB, Redis</p>
-        </div>
-        <div class="bg-white p-5 rounded-xl shadow-md">
-          <h3 class="font-semibold text-indigo-600 mb-2">Data Science</h3>
-          <p class="text-sm text-gray-700">Python, Machine Learning, Tableau</p>
-        </div>
-        <div class="bg-white p-5 rounded-xl shadow-md">
-          <h3 class="font-semibold text-indigo-600 mb-2">Tools</h3>
-          <p class="text-sm text-gray-700">Git, TFS, Design Patterns, Unit Testing, Clean Code</p>
-        </div>
+    <!-- Sidebar -->
+    <aside class="bg-gradient-to-br from-purple-600 to-pink-400 text-white p-6 w-full md:w-64 flex flex-col items-center">
+      <img src="assets/queen-goje.jpg" alt="Marzieh Qainian" class="w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover mb-4">
+      <h1 class="text-2xl font-bold mb-2">Marzieh Qainian</h1>
+      <div class="social-icons flex justify-center mb-6">
+        <a href="https://github.com/MarziehQainian" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/marziehqainian" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
-    </section>
+      <nav class="flex flex-col space-y-3 text-center">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </aside>
 
-    <!-- Experience Section -->
-    <section id="experience" class="mb-20">
-      <h2 class="text-4xl font-bold gradient-text mb-6">Experience Highlights</h2>
-      <div class="space-y-6">
-        <div>
-          <h3 class="text-lg font-semibold text-purple-700">Backend Developer | Telecom Sector</h3>
-          <p class="text-sm text-gray-700">
-            Contributed to large-scale telecom projects by designing robust backend services that enhanced communication infrastructures and system reliability.
-          </p>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold text-purple-700">Full Stack Developer | Banking and Financial Services</h3>
-          <p class="text-sm text-gray-700">
-            Developed secure, scalable banking applications with a focus on fraud prevention, transaction processing, and customer data management, empowering financial institutions to innovate faster.
-          </p>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold text-purple-700">Full Stack Developer | Insurance Industry</h3>
-          <p class="text-sm text-gray-700">
-            Built dynamic, rule-based insurance claim systems that automated workflows, reduced processing times, and improved customer satisfaction for leading insurance companies.
-          </p>
-        </div>
-      </div>
-    </section>
+    <!-- Main Content -->
+    <main class="flex-1 p-6 md:p-10">
 
-    <!-- Projects Section -->
-    <section id="projects" class="mb-20">
-      <h2 class="text-4xl font-bold gradient-text mb-6">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-white p-5 rounded-xl shadow-md">
-          <h3 class="text-lg font-semibold text-purple-700">E-Commerce API</h3>
-          <p class="text-sm text-gray-700">Scalable RESTful API for seamless online transactions with secure backend integration.</p>
-        </div>
-        <div class="bg-white p-5 rounded-xl shadow-md">
-          <h3 class="text-lg font-semibold text-purple-700">Financial Dashboard</h3>
-          <p class="text-sm text-gray-700">Interactive dashboard for real-time financial insights built with Angular and .NET Core.</p>
-        </div>
-      </div>
-    </section>
+      <section id="about" class="mb-20">
+        <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-6">Hello, I'm Marzieh</h2>
+        <p class="text-gray-700 leading-relaxed">
+          A passionate Full Stack .NET Developer and aspiring Data Scientist based in Berlin. I turn complex ideas into scalable backend systems and explore the power of data to build smarter solutions. Innovation, clean architecture, and creativity drive my code.
+        </p>
+      </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="mb-20">
-      <h2 class="text-4xl font-bold gradient-text mb-6">Contact</h2>
-      <p class="text-gray-700 mb-2">Let's build something amazing together!</p>
-      <p class="text-gray-700">Email: <a href="mailto:marzieh.qainian@gmail.com" class="text-indigo-600 hover:underline">marzieh.qainian@gmail.com</a></p>
-      <p class="text-gray-700 mt-2">GitHub: <a href="https://github.com/MarziehQainian" target="_blank" class="text-indigo-600 hover:underline">MarziehQainian</a></p>
-      <p class="text-gray-700 mt-2">LinkedIn: <a href="https://linkedin.com/in/marziehqainian" target="_blank" class="text-indigo-600 hover:underline">marziehqainian</a></p>
-    </section>
+      <section id="skills" class="mb-20">
+        <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-6">Skills</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="bg-white p-5 rounded-xl shadow-md">
+            <h3 class="font-semibold text-indigo-600 mb-2">Backend</h3>
+            <p class="text-sm text-gray-700">C#, .NET Core, ASP.NET MVC, Entity Framework, Dapper, Microservices</p>
+          </div>
+          <div class="bg-white p-5 rounded-xl shadow-md">
+            <h3 class="font-semibold text-indigo-600 mb-2">Frontend</h3>
+            <p class="text-sm text-gray-700">JavaScript, Angular, HTML, CSS, KendoUI</p>
+          </div>
+          <div class="bg-white p-5 rounded-xl shadow-md">
+            <h3 class="font-semibold text-indigo-600 mb-2">Databases</h3>
+            <p class="text-sm text-gray-700">SQL Server, MongoDB, Redis</p>
+          </div>
+          <div class="bg-white p-5 rounded-xl shadow-md">
+            <h3 class="font-semibold text-indigo-600 mb-2">Data Science</h3>
+            <p class="text-sm text-gray-700">Python, Machine Learning, Tableau</p>
+          </div>
+          <div class="bg-white p-5 rounded-xl shadow-md">
+            <h3 class="font-semibold text-indigo-600 mb-2">Tools</h3>
+            <p class="text-sm text-gray-700">Git, TFS, Design Patterns, Unit Testing, Clean Code</p>
+          </div>
+        </div>
+      </section>
 
-  </main>
+      <section id="experience" class="mb-20">
+        <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-6">Experience Highlights</h2>
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-lg font-semibold text-purple-700">Backend Developer | Telecom Sector</h3>
+            <p class="text-sm text-gray-700">
+              Contributed to large-scale telecom projects by designing robust backend services that enhanced communication infrastructures and system reliability.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-purple-700">Full Stack Developer | Banking and Financial Services</h3>
+            <p class="text-sm text-gray-700">
+              Developed secure, scalable banking applications with a focus on fraud prevention, transaction processing, and customer data management, empowering financial institutions to innovate faster.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-purple-700">Full Stack Developer | Insurance Industry</h3>
+            <p class="text-sm text-gray-700">
+              Built dynamic, rule-based insurance claim systems that automated workflows, reduced processing times, and improved customer satisfaction for leading insurance companies.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="mb-20">
+        <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-6">Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="bg-white p-5 rounded-xl shadow-md">
+            <h3 class="text-lg font-semibold text-purple-700">E-Commerce API</h3>
+            <p class="text-sm text-gray-700">Scalable RESTful API for seamless online transactions with secure backend integration.</p>
+          </div>
+          <div class="bg-white p-5 rounded-xl shadow-md">
+            <h3 class="text-lg font-semibold text-purple-700">Financial Dashboard</h3>
+            <p class="text-sm text-gray-700">Interactive dashboard for real-time financial insights built with Angular and .NET Core.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="mb-20">
+        <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-6">Contact</h2>
+        <p class="text-gray-700 mb-2">Let's build something amazing together!</p>
+        <p class="text-gray-700">Email: <a href="mailto:marzieh.qainian@gmail.com" class="text-indigo-600 hover:underline">marzieh.qainian@gmail.com</a></p>
+        <p class="text-gray-700 mt-2">GitHub: <a href="https://github.com/MarziehQainian" target="_blank" class="text-indigo-600 hover:underline">MarziehQainian</a></p>
+        <p class="text-gray-700 mt-2">LinkedIn: <a href="https://linkedin.com/in/marziehqainian" target="_blank" class="text-indigo-600 hover:underline">marziehqainian</a></p>
+      </section>
+
+    </main>
+  </div>
 
   <script>
     ScrollReveal().reveal('section', { delay: 200, distance: '40px', duration: 800, origin: 'bottom' });
